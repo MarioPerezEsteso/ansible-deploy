@@ -2,6 +2,8 @@
 
 - include: setup.yml
 
+- include: sourcecode.yml
+
 - include: deploy.yml
 
 - include: symlinks.yml
