@@ -1,0 +1,9 @@
+---
+
+- include: setup.yml
+
+- include: deploy.yml
+
+- include: symlinks.yml
+
+- include: cleanup.yml
