@@ -1,1 +1,9 @@
 ---
+
+- name: Check if application directory exists
+  file:
+    state: directory
+    path: "{{ application_dir }}"
+    owner: "{{ application_dir_owner }}"
+    group: "{{ application_dir_group }}"
+    mode: "{{ application_dir_mode }}"

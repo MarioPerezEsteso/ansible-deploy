@@ -3,6 +3,15 @@
 # Directory where the application will be released.
 application_dir: '/tmp/application'
 
+# Owner of the application directory.
+application_dir_owner: 'root'
+
+# Group of the application directory.
+application_dir_group: 'root'
+
+# Mode of the application directory.
+application_dir_mode: '775'
+
 # Directory where the releases are stored.
 releases_dir: 'releases'
 
