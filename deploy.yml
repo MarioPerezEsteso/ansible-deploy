@@ -3,7 +3,7 @@
 - name: Deploy server playbook
   hosts: production
   vars_prompt:
-    - name: 'git_branch'
+    - name: 'git_repository_branch'
       prompt: 'Tag to deploy (empty for master):'
       private: no
       default: 'master'

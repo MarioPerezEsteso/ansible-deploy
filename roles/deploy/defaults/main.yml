@@ -18,8 +18,8 @@ application_releases_dir: 'releases'
 # Directory where the application is running (symbolic link).
 application_current_dir: 'current'
 
-# Default Git branch to deploy.
-git_default_branch: 'master'
+# Git repository.
+git_repository: 'https://github.com/MarioPerezEsteso/ansible-deploy.git'
 
 # Number of releases to keep in the releases directory.
 keep_releases: 3
