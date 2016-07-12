@@ -1,1 +1,15 @@
 ---
+
+- name: Get release version
+  set_fact:
+    release_version: "{{ lookup('pipe', 'date -u +%Y%m%d%H%M%SZ') }}"
+  run_once: true
+  when: release_version is not defined
+  delegate_to: localhost
+
+- name: Clone Git repository in application releases directory
+  git:
+    repo: "{{ git_repository }}"
+    dest: "{{ application_dir }}/{{ application_releases_dir }}/{{ release_version }}"
+    version: "{{ git_repository_branch }}"
+    clone: yes
