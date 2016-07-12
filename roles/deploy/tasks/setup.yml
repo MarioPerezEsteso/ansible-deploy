@@ -1,9 +1,17 @@
 ---
 
-- name: Check if application directory exists
+- name: Ensure application base directory exists
   file:
     state: directory
     path: "{{ application_dir }}"
+    owner: "{{ application_dir_owner }}"
+    group: "{{ application_dir_group }}"
+    mode: "{{ application_dir_mode }}"
+
+- name: Ensure application releases directory exists
+  file:
+    state: directory
+    path: "{{ application_dir }}/{{ application_releases_dir }}"
     owner: "{{ application_dir_owner }}"
     group: "{{ application_dir_group }}"
     mode: "{{ application_dir_mode }}"
