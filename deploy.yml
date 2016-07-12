@@ -2,5 +2,19 @@
 
 - name: Deploy server playbook
   hosts: production
+  vars_prompt:
+    - name: 'git_branch'
+      prompt: 'Tag to deploy (empty for master):'
+      private: no
+      default: 'master'
+    - name: 'execute_migrations'
+      prompt: 'Execute migrations? (y/n):'
+      private: no
+      default: 'n'
+    - name: 'maintenance_mode'
+      prompt: 'Enable maintenance mode (y/n):'
+      private: no
+      default: 'n'
+      when: execute_migrations == 'y'
   roles:
     - deploy
