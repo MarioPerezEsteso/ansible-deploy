@@ -1,0 +1,5 @@
+[production]
+production ansible_ssh_host=192.168.33.12
+
+[test]
+test ansible_ssh_host=192.168.33.12
