@@ -13,10 +13,10 @@ application_dir_group: 'root'
 application_dir_mode: '775'
 
 # Directory where the releases are stored.
-releases_dir: 'releases'
+application_releases_dir: 'releases'
 
 # Directory where the application is running (symbolic link).
-current_dir: 'current'
+application_current_dir: 'current'
 
 # Default Git branch to deploy.
 git_default_branch: 'master'
