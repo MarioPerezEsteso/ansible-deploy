@@ -1,3 +1,16 @@
 ---
 
+# Directory where the application will be released.
+application_dir: '/tmp/application'
+
+# Directory where the releases are stored.
+releases_dir: 'releases'
+
+# Directory where the application is running (symbolic link).
+current_dir: 'current'
+
+# Default Git branch to deploy.
 git_default_branch: 'master'
+
+# Number of releases to keep in the releases directory.
+keep_releases: 3
