@@ -1,0 +1,6 @@
+---
+
+- name: Deploy server playbook
+  hosts: production
+  roles:
+    - deploy
